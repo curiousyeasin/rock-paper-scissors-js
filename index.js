@@ -5,6 +5,9 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
+let humanScore = 0;
+let computerScore = 0;
+
 //Display the options
 rl.question(
   "RPS Console Game\n Choice:\n 1. Rock\n 2. Paper\n 3. Scissor\n",
