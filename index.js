@@ -10,6 +10,13 @@ rl.question(
   "RPS Console Game\n Choice:\n 1. Rock\n 2. Paper\n 3. Scissor\n",
   (playerChoice) => {
     const playChoice = parseInt(playerChoice);
+
+    //Validate user input
+    if (![1, 2, 3].includes(playChoice)) {
+      console.log("Invalid input, Please enter 1, 2, or 3");
+      rl.close();
+      return;
+    }
     //Generate computer player Choice
     const compChoice = Math.floor(Math.random() * 3) + 1;
 
